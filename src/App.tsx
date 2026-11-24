@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { AlertDialog, Badge, Box, Button, Callout, Card, Dialog, Flex, Grid, Heading, SegmentedControl, Separator, Text } from '@radix-ui/themes'
-import { CheckCircledIcon, CheckIcon, CircleIcon, Half2Icon, InfoCircledIcon, PlusIcon, RowsIcon } from '@radix-ui/react-icons'
+import { CheckCircledIcon, CircleIcon, Half2Icon, InfoCircledIcon, PlusIcon, RowsIcon } from '@radix-ui/react-icons'
+import logo from './assets/zen-taskflow-logo.svg'
 import TaskForm from './components/TaskForm'
 import TaskBoard from './components/TaskBoard'
 import { changeStatus, countTasks, createTask, deleteTask, editTask, loadTasks, saveTasks } from './services/task.service'
@@ -44,7 +45,7 @@ export default function App() {
   return <>
     <header className="header">
       <Flex align="center" justify="between" gap="3" className="header-inner">
-        <a href="./" className="brand" aria-label="ZenTaskFlow — início"><span className="brand-icon"><CheckIcon /></span>ZenTaskFlow</a>
+        <a href="./" className="brand" aria-label="ZenTaskFlow — início"><img src={logo} width="36" height="36" alt="" className="brand-logo" />ZenTaskFlow</a>
         <Badge color="gray" variant="surface" size="2">Organização pessoal</Badge>
       </Flex>
     </header>

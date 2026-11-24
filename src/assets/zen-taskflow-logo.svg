@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">ZenTaskFlow</title>
+  <desc id="desc">Duas colunas de um quadro Kanban seguidas por um sinal de tarefa concluída.</desc>
+  <rect x="2" y="2" width="60" height="60" rx="17" fill="#152A2A"/>
+  <rect x="13" y="24" width="7" height="21" rx="3.5" fill="#B6CFCA"/>
+  <rect x="25" y="19" width="7" height="26" rx="3.5" fill="#E5F1ED"/>
+  <path d="m39 35 4 4 8-10" fill="none" stroke="#8CE7BC" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
