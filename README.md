@@ -6,7 +6,7 @@
 
 Aplicação acadêmica de gerenciamento de tarefas desenvolvida para a disciplina de Gerência de Configuração e Manutenção de Software.
 
-O ZenTaskFlow ajuda a organizar atividades e acompanhar o progresso em um quadro Kanban simples. O projeto permite exercitar versionamento, testes automatizados e, em uma etapa futura, integração e entrega contínuas.
+O ZenTaskFlow ajuda a organizar atividades e acompanhar o progresso em um quadro Kanban simples. O projeto usa versionamento, testes automatizados e integração e entrega contínuas com GitHub Actions.
 
 ## Veja o ZenTaskFlow em ação
 
@@ -60,6 +60,16 @@ npm run build
 
 Os testes executam uma única vez, sem modo watch, e usam a lógica real da aplicação. O build verifica os tipos e gera os arquivos estáticos em `dist/`.
 
+## Integração e entrega contínuas
+
+O workflow [CI/CD](.github/workflows/ci-cd.yml) roda em pull requests para `main`, em pushes para `main` e também pode ser iniciado manualmente. A etapa de qualidade instala as dependências com `npm ci` e executa, nesta ordem, os testes, o ESLint e o build TypeScript/Vite. Qualquer falha interrompe o workflow antes da publicação.
+
+Somente um push em `main` que conclua todas as verificações publica o artefato `dist/` no GitHub Pages. Pull requests validam as alterações sem publicar o site. Para habilitar a primeira publicação, em **Settings > Pages > Build and deployment**, selecione **GitHub Actions** como fonte.
+
+- URL prevista para publicação: https://devcaverna.github.io/zen-taskflow/
+- Execuções e evidências: [GitHub Actions](https://github.com/DevCaverna/zen-taskflow/actions)
+- Fluxo sugerido: crie uma branch, abra um pull request, corrija eventuais falhas indicadas pelas verificações e integre apenas quando o workflow estiver verde.
+
 ## Estrutura
 
 ```text
@@ -92,8 +102,4 @@ O arrastar usa o recurso nativo do navegador. No celular e por teclado, utilize 
 ## Próximas etapas
 
 - Integrantes: pendentes.
-- GitHub Actions e artefatos de entrega: pendentes.
-- Publicação no GitHub Pages e URL da aplicação: pendentes.
-- Configuração de bloqueio de publicação quando os testes falharem: pendente.
-
-Nenhum pipeline, publicação ou simulação de falha foi configurado nesta etapa.
+- Adicionar os nomes dos demais integrantes da equipe.
