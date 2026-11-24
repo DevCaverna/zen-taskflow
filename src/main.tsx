@@ -7,7 +7,7 @@ import App from './App'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <Theme appearance="light" accentColor="indigo" grayColor="slate" radius="medium">
+    <Theme className="app-theme" appearance="light" accentColor="indigo" grayColor="slate" radius="medium">
       <App />
     </Theme>
   </React.StrictMode>,
