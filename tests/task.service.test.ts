@@ -9,7 +9,7 @@ describe('regras reais de tarefas', () => {
   it('cadastra tarefa válida como Pendente, com ID e data automáticos', () => {
     const [task] = createTask([], { title: '  Preparar entrega  ', description: 'Revisar documentação' })
     expect(task).toMatchObject({ title: 'Preparar entrega', description: 'Revisar documentação', status: 'pending' })
-    expect(task.id).toBe('demo-failure')
+    expect(task.id).toBeTruthy()
     expect(Number.isFinite(Date.parse(task.createdAt))).toBe(true)
   })
   it.each(['', '   ', '\n\t'])('rejeita título vazio ou composto por espaços: %j', title => {
