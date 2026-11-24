@@ -66,7 +66,7 @@ O workflow [CI/CD](.github/workflows/ci-cd.yml) roda em pull requests para `main
 
 Somente um push em `main` que conclua todas as verificações publica o artefato `dist/` no GitHub Pages. Pull requests validam as alterações sem publicar o site. Para habilitar a primeira publicação, em **Settings > Pages > Build and deployment**, selecione **GitHub Actions** como fonte.
 
-- Aplicação publicada: https://devcaverna.github.io/zen-taskflow/
+- URL prevista para publicação: https://devcaverna.github.io/zen-taskflow/
 - Execuções e evidências: [GitHub Actions](https://github.com/DevCaverna/zen-taskflow/actions)
 - Fluxo sugerido: crie uma branch, abra um pull request, corrija eventuais falhas indicadas pelas verificações e integre apenas quando o workflow estiver verde.
 
