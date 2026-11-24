@@ -1,8 +1,22 @@
+<p align="center">
+  <img src="src/assets/zen-taskflow-logo.svg" width="80" height="80" alt="Logo do ZenTaskFlow" />
+</p>
+
 # ZenTaskFlow
 
 Aplicação acadêmica de gerenciamento de tarefas desenvolvida para a disciplina de Gerência de Configuração e Manutenção de Software.
 
 O ZenTaskFlow ajuda a organizar atividades e acompanhar o progresso em um quadro Kanban simples. O projeto permite exercitar versionamento, testes automatizados e, em uma etapa futura, integração e entrega contínuas.
+
+## Veja o ZenTaskFlow em ação
+
+Uma tarefa passando de **Pendente** para **Em andamento** e depois para **Concluída**, com os indicadores atualizados automaticamente.
+
+![Demonstração do quadro Kanban: uma tarefa é arrastada pelos três status](media/zen-taskflow-demo.gif)
+
+[Ver imagem estática da tela principal](media/zen-taskflow-preview.png).
+
+A demonstração foi capturada na aplicação real, em uma sessão isolada com uma tarefa de exemplo. A aplicação inicia sem tarefas predefinidas.
 
 ## Funcionalidades
 
@@ -49,7 +63,10 @@ Os testes executam uma única vez, sem modo watch, e usam a lógica real da apli
 ## Estrutura
 
 ```text
+media/                   # GIF e captura da aplicação para este README
 src/
+├── assets/
+│   └── zen-taskflow-logo.svg
 ├── components/
 │   ├── TaskBoard.tsx
 │   └── TaskForm.tsx
